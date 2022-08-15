@@ -14,7 +14,7 @@ pip install request
 
 hepsiBurada = web(product='salıncak',page='https://www.hepsiburada.com/ara?q=', filters="fiyat:100-200")
 
-yukaridaki product ve page parametlerini degiderek kullanabilirsin
+yukaridaki product ve page parametlerini degiserek kullanabilirsin
 
 
 
