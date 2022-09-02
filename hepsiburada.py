@@ -30,7 +30,7 @@ class web():
                 }
                 print("----------------------------------------------------------------------------------------------")
                 productSchema["name"] = aTag.select("a div:last-child h3")[0].text
-                productSchema["price"] = aTag.select("a div:last-child div div[data-test-id='price-current-price']")[0].text
+                productSchema["price"] = aTag.select("a div[data-test-id='price-current-price']")[0].text
                 productSchema["productURL"] = f"https://www.hepsiburada.com/{aTag['href']}"
                 productSchema["productImage"] = aTag.select("img[src^='https://productimages']")[0]["src"]
                 if len(aTag.select("div[data-test-id = 'review'] div:last-child"))>0:
@@ -46,7 +46,6 @@ class web():
 hepsiBurada = web(product='salıncak',page='https://www.hepsiburada.com/ara?q=', filters="fiyat:100-200")
 
 hepsiBurada.getProduct()
-
 
 
 
